@@ -8,7 +8,7 @@
       <h1>Volume Limas</h1>
     </div>
     <div class="row justify-content-center">
-      <h4>luas alas x tinggi</h4>
+      <h4>1/3 x luas alas x tinggi</h4>
     </div>
 
     <form method="post" action="{{ route('perhitungan.volume.limas') }}">

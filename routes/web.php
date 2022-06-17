@@ -56,3 +56,14 @@ Route::controller(PerhitunganController::class)->prefix('perhitungan')->name('pe
         Route::post('tabung', 'hasil_volume_tabung');
     });
 });
+
+// Route::controller(DataController::class)->prefix('data')->name('data.')->group(function() {
+//     Route::get('/', 'index')->name('export');
+
+//     Route::get('export/siswa', 'siswa')->name('export.siswa');
+//     Route::get('export/perhitungan', 'perhitungan')->name('export.perhitungan');
+// });
+
+Route::get('/data', [DataController::class, 'index'])->name('data.export');
+Route::get('/data/siswa', [DataController::class, 'siswa'])->name('data.export.siswa');
+Route::get('/data/perhitungan', [DataController::class, 'perhitungan'])->name('data.export.perhitungan');

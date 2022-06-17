@@ -135,7 +135,7 @@ class PerhitunganController extends Controller
     {
         $luas_alas = 1/2 * $request->alas * $request->tinggi_alas;
         $hasil = 1/3 * $request->tinggi * $luas_alas;
-        
+
         Perhitungan::create([
             'hasil' => $hasil,
             'kategori' => 'limas'
